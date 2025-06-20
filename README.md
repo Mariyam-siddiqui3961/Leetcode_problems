@@ -1,5 +1,5 @@
 # Leetcode_problems
-DSA problem solving using java
+DSA problem solving on LeetCode using java
 
  
  # Overview

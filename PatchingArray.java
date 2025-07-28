@@ -8,3 +8,10 @@ class Solution {
                 miss+=nums[i];
                 i++;
             }else{
+                 miss+=miss;
+                patches++;
+            }
+        }
+        return patches;
+    }
+}

@@ -10,3 +10,10 @@ class Solution {
 
         for (char c : t.toCharArray())
         freq[c-'a']--;
+        for (int f : freq){
+            if (f!=0)
+            return false;
+        }
+        return true;
+    }
+}

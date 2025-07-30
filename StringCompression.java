@@ -8,3 +8,10 @@ class Solution {
             if (read + 1 == chars.length || chars[read] != chars[read + 1]) {
                 // Write the character at anchor
                 chars[write++] = chars[anchor];
+                 // If group size > 1, write the count
+                int count = read - anchor + 1;
+                if (count > 1) {
+                    for (char c : Integer.toString(count).toCharArray()) {
+                        chars[write++] = c;
+                    }
+                }

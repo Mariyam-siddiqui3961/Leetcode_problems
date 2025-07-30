@@ -15,3 +15,12 @@ class Solution {
                         chars[write++] = c;
                     }
                 }
+                 // Move anchor to the next group
+                anchor = read + 1;
+            }
+        }
+
+        return write;
+
+    }
+}

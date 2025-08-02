@@ -6,5 +6,7 @@ class Solution {
             n=n/5;
             count = count + n;
         }
-        
+        return count;
+    }
+}
       

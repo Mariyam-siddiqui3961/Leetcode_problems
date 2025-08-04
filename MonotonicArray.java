@@ -10,3 +10,9 @@ class Solution {
             }
             if (nums[i]> nums[i-1]){
                 decreasing = false;
+                 }
+        }
+        return increasing || decreasing;
+
+    }
+}

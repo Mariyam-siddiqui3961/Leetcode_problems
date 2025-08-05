@@ -11,3 +11,8 @@ class Solution {
             int area = minHeight * width;
 
             maxArea = Math.max(maxArea, area);
+            if (height[left] < height[right]){
+                left++;
+            }else{
+                right--;
+            }

@@ -15,3 +15,9 @@ class Solution {
         for (int i=1; i<=m; i++){
             dp[i][0]=dp[i-1][0] && s1.charAt(i-1)==s3.charAt(i-1);
         }
+         // fill the rest of the table
+        for(int i=1; i<=m; i++){
+            for (int j=1; j<=n; j++){
+                char c = s3.charAt(i+j-1);
+                dp[i][j] = (dp[i-1][j] && s1.charAt(i-1)==c)|| (dp[i][j-1] && s2.charAt(j-1)==c);
+            }

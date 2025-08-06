@@ -12,3 +12,6 @@ class Solution {
         for (int j =1; j<=n; j++){
             dp[0][j]= dp[0][j-1] && s2.charAt(j-1) == s3.charAt(j-1);
         }
+        for (int i=1; i<=m; i++){
+            dp[i][0]=dp[i-1][0] && s1.charAt(i-1)==s3.charAt(i-1);
+        }

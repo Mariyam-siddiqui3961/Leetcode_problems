@@ -8,3 +8,7 @@ class Solution {
         //DP table
         boolean[][] dp = new boolean [m+1][n+1];
         dp[0][0]= true;
+        //Fill first row (s1 is empty)
+        for (int j =1; j<=n; j++){
+            dp[0][j]= dp[0][j-1] && s2.charAt(j-1) == s3.charAt(j-1);
+        }

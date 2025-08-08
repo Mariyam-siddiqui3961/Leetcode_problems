@@ -27,5 +27,10 @@ class Solution {
             if (nums[mid]==target){
                 result=mid;
                 low = mid +1;
+                 }else if (nums[mid]<target){
+                low = mid+1;
+            }else {
+                high=mid-1;
+            }
 
 

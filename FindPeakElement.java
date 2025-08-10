@@ -7,3 +7,6 @@ class Solution {
             int mid = (low+high)/2;
             if(nums[mid] < nums[mid+1]){
                 low=mid+1;
+                }else{
+                high=mid;
+            }

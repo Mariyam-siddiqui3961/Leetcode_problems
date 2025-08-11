@@ -13,3 +13,11 @@ class Solution {
             bit++;
             temp >>= 1;
         }
+        // Step 2: Sort in non-decreasing order
+        Collections.sort(powers);
+        
+        // Step 3: Answer each query directly
+        int[] ans = new int[queries.length];
+        for (int i = 0; i < queries.length; i++) {
+            int l = queries[i][0], r = queries[i][1];
+            long prod = 1;

@@ -21,3 +21,13 @@ class Solution {
         for (int i = 0; i < queries.length; i++) {
             int l = queries[i][0], r = queries[i][1];
             long prod = 1;
+            for (int j = l; j <= r; j++) {
+                prod = (prod * powers.get(j)) % MOD;
+            }
+            ans[i] = (int) prod;
+        }
+        
+        return ans;
+
+    }
+}

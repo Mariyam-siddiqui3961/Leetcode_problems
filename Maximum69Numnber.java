@@ -7,3 +7,9 @@ class Solution {
                 digits[i] = '9'; 
                 break;          
             }
+            }
+        
+        // Convert back to integer
+        return Integer.parseInt(new String(digits));
+    }
+}

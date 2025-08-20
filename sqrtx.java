@@ -11,3 +11,7 @@ class Solution {
             int mid = left + (right - left) / 2;
              if (mid <= x / mid) {
                 left = mid + 1;
+                result = mid; 
+            } else {
+                right = mid - 1;
+            }

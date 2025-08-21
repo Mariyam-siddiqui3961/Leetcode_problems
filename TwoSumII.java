@@ -6,3 +6,10 @@ class Solution {
             int sum= numbers[left] +numbers[right];
             if (sum==target){
                 return new int[]{left+1, right+1};
+                }
+            else if(sum<target){
+                left++;
+            }else{
+                right--;
+            }
+        }

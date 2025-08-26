@@ -9,3 +9,9 @@ class Solution {
                 }
             }
             if (count > nums.length / 2) {
+                return nums[i];
+            }
+        }
+        return -1; // should never happen since majority element always exists
+    }
+}

@@ -6,3 +6,8 @@ public void rotate(int[] nums, int k) {
         int last = nums[n - 1];     // save the last element
         for (int i = n - 1; i > 0; i--) {   // inner loop: shift everything right
             nums[i] = nums[i - 1];
+            }
+
+        nums[0] = last;   // put saved last element at front
+    }
+}

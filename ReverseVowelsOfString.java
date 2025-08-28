@@ -11,3 +11,7 @@ class Solution {
             }
             while (left < right && vowels.indexOf(chars[right]) == -1){
                 right --;
+                 }
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;

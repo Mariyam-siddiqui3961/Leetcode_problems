@@ -26,3 +26,6 @@ int sum = 0;
                 }
             }
         }
+         return new int []{};
+    }
+}

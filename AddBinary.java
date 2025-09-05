@@ -11,3 +11,8 @@ class Solution {
             if (i>=0){
                 sum += a.charAt(i)- '0';
                 i--;
+                }
+
+            if (j>=0){
+                sum+= b.charAt(j) - '0';
+                j--;

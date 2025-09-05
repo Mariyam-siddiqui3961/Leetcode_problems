@@ -16,3 +16,11 @@ class Solution {
             if (j>=0){
                 sum+= b.charAt(j) - '0';
                 j--;
+                }
+
+            result.append(sum%2);
+            carry= sum/2;
+        }
+        return result.reverse().toString();
+    }
+}

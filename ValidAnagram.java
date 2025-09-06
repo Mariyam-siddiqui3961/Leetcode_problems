@@ -8,4 +8,12 @@ class Solution {
         // Step 1: Count chars in s
         for (char c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
-            
+            }
+
+        // Step 2: Reduce counts using t
+        for (char c : t.toCharArray()) {
+            if (!map.containsKey(c)) {
+                return false;
+            }
+            map.put(c, map.get(c) - 1);
+            if (map.get(c) == 0) {

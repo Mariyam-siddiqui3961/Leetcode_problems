@@ -8,3 +8,4 @@ class Solution {
         // Step 1: Count chars in s
         for (char c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
+            

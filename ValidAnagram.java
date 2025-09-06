@@ -17,3 +17,11 @@ class Solution {
             }
             map.put(c, map.get(c) - 1);
             if (map.get(c) == 0) {
+                map.remove(c);
+            }
+        }
+
+        // Step 3: Check map
+        return map.isEmpty();        
+    }
+}

@@ -12,3 +12,8 @@ class Solution {
             if (!map.containsKey(c) || map.get(c) == 0) {
                 return false;  // Not enough of this character
             }
+            map.put(c, map.get(c) - 1);  // use one occurrence
+        }
+        return true;
+    }
+}

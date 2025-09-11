@@ -15,3 +15,18 @@ class Solution {
         }
         //sort vowels by ascii value
         java.util.Collections.sort(vowelList);
+         //buils result
+        StringBuilder result = new StringBuilder();
+        int ind = 0; //pointer for vowel
+
+        for (char c: s.toCharArray()){
+            if(vowels.contains(c)){
+                result.append(vowelList.get(ind++));
+            }else{
+                result.append(c);
+            }
+        }
+        return result.toString();
+
+    }
+}

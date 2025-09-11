@@ -7,4 +7,11 @@ class Solution {
             vowels.add(c);
         }
         // Collect vowels
-        
+        java.util.List<Character> vowelList = new java.util.ArrayList<>();
+        for (char c: s.toCharArray()){
+            if(vowels.contains(c)){
+                vowelList.add(c);
+            }
+        }
+        //sort vowels by ascii value
+        java.util.Collections.sort(vowelList);

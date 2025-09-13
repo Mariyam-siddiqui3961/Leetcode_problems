@@ -8,3 +8,8 @@ class Solution {
                 set.remove(s.charAt(left++));
             }
             set.add(s.charAt(right));
+            max= Math.max(max, right-left+1);
+        }
+        return max;
+    }
+}

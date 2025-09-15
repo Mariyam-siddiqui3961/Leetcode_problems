@@ -16,3 +16,12 @@ class Solution {
                 result[index++] = num;
             }
         }
+        for (int num : nums){
+            if(num>pivot){
+                result[index++] = num;
+            }
+        }
+        return result;
+
+    }
+}

@@ -11,3 +11,10 @@ class Solution {
             }else{
                 current.next= list2;
                 list2=list2.next;
+                }
+            current=current.next;
+        }
+        current.next = (list1 != null) ? list1 : list2;
+        return dummy.next;
+    }
+}

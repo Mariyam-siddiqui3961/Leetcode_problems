@@ -1,0 +1,1 @@
+//---------------even number bitwise or------------

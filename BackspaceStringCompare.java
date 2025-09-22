@@ -1,1 +1,16 @@
 //-----------Backspace String Compare----------
+class Solution {
+    public boolean backspaceCompare(String s, String t) {
+        int i = s.length()-1, j = t.length()-1;
+
+        int skipS=0;
+        int skipT =0;
+
+        while (i>=0 || j>=0){
+            while(i>=0){
+                if(s.charAt(i) == '#'){
+                    skipS++;
+                    i--;
+                }else if (skipS > 0){
+                    skipS--; i--;
+                }else break;

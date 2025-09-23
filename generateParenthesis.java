@@ -5,3 +5,10 @@ class Solution {
 
         generate(result, "", 0, 0, n);
         return result;
+        }
+    private void generate(List<String> result, String current , int open, int close, int max){
+        if(current.length() == max*2){
+            result.add(current);
+            return;
+        }
+        if(open<max){

@@ -12,3 +12,10 @@ class Solution {
             return;
         }
         if(open<max){
+            generate(result, current + "(", open +1, close, max);
+        }
+        if(close<open){
+            generate(result, current + ")", open, close+1, max);
+        }
+    }
+}

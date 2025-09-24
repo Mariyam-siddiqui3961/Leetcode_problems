@@ -24,3 +24,11 @@ class Solution {
                 sb.append(")");
                 break;
             }
+            map.put(remainder, sb.length());
+            remainder *=10;
+            sb.append(remainder / den);
+            remainder %= den;
+        }
+        return sb.toString();
+    }
+}

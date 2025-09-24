@@ -17,3 +17,10 @@ class Solution {
 
         sb.append(".");
         Map<Long, Integer> map = new HashMap<>();
+        while(remainder!=0){
+            if(map.containsKey(remainder)){
+                int index = map.get(remainder);
+                sb.insert(index, "(");
+                sb.append(")");
+                break;
+            }

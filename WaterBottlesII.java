@@ -8,3 +8,9 @@ class Solution {
             // Exchange exactly once for the current numExchange
             emptyBottles = emptyBottles - numExchange + 1; // Subtract used bottles, add 1 new empty from drinking
             totalDrank += 1;                               // Count newly drunk bottle
+            numExchange += 1;                              // Increment exchange value for next round
+        }
+
+        return totalDrank;
+    }
+}

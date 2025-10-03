@@ -14,3 +14,12 @@ class Solution {
                     pq.offer(new int[]{i,j,heightMap[i][j]});
                     visited[i][j] = true;
                 }
+                }
+        }
+        int water = 0;
+        int[][] dirs = {{1,0}, {-1,0}, {0,1}, {0,-1}};
+
+        //process heap
+        while(!pq.isEmpty()){
+            int[] cell = pq.poll();
+            int row = cell[0], col = cell[1], height = cell[2];

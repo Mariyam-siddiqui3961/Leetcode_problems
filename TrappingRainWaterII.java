@@ -30,3 +30,11 @@ class Solution {
 
                 // if neighbour is lower , water trapped
                 water += Math.max(0, height - heightMap[nr][nc]);
+                //raise neighbourheight to boundry level
+                pq.offer(new int[]{nr, nc, Math.max(heightMap[nr][nc], height)});
+
+            }
+        }
+        return water;
+    }
+}

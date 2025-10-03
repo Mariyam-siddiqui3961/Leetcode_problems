@@ -23,3 +23,10 @@ class Solution {
         while(!pq.isEmpty()){
             int[] cell = pq.poll();
             int row = cell[0], col = cell[1], height = cell[2];
+             for(int[] d: dirs){
+                int nr = row + d[0], nc = col + d[1];
+                if(nr < 0 || nc < 0 || nr >= m || nc >= n || visited[nr][nc]) continue;
+                visited[nr][nc] = true;
+
+                // if neighbour is lower , water trapped
+                water += Math.max(0, height - heightMap[nr][nc]);

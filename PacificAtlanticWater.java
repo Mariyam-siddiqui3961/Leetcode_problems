@@ -17,3 +17,31 @@ class Solution {
             dfs(heights, pacific, i, 0, heights[i][0]);
         for (int j = 0; j < n; j++)
             dfs(heights, pacific, 0, j, heights[0][j]);
+            for (int i = 0; i < m; i++)
+            dfs(heights, atlantic, i, n - 1, heights[i][n - 1]);
+        for (int j = 0; j < n; j++)
+            dfs(heights, atlantic, m - 1, j, heights[m - 1][j]);
+
+        // Cells reachable by both oceans
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (pacific[i][j] && atlantic[i][j]) {
+                    result.add(Arrays.asList(i, j));
+                }
+            }
+        }
+        return result;
+    }
+
+    private void dfs(int[][] heights, boolean[][] visited, int r, int c, int prevHeight) {
+        if (r < 0 || c < 0 || r >= m || c >= n) return;
+        if (visited[r][c]) return;
+        if (heights[r][c] < prevHeight) return;
+
+        visited[r][c] = true;
+
+        for (int[] dir : directions) {
+            dfs(heights, visited, r + dir[0], c + dir[1], heights[r][c]);
+        }
+    }
+}

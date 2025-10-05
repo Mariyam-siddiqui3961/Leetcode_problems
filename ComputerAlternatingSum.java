@@ -6,3 +6,10 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             if (i % 2 == 0)
                 sum += nums[i];   // add if index is even
+                else
+                sum -= nums[i];   // subtract if index is odd
+        }
+
+        return sum;
+    }
+}

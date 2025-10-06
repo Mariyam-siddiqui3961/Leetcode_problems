@@ -25,3 +25,15 @@ class CustomStack {
         if (top > 0) {
             inc[top - 1] += inc[top];
         }
+        inc[top] = 0;  // reset current increment
+        top--;
+        return res;
+    }
+    
+    public void increment(int k, int val) {
+        int idx = Math.min(k, top + 1) - 1;  // last index to apply increment
+        if (idx >= 0) {
+            inc[idx] += val;
+        }
+    }
+}

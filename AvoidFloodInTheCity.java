@@ -5,3 +5,11 @@ class Solution {
         int[] ans = new int[n];
         Map<Integer, Integer> fullLakes = new HashMap<>();
         TreeSet<Integer> dryDays = new TreeSet<>();
+        for (int i = 0; i < n; i++) {
+            int lake = rains[i];
+            if (lake == 0) {
+                // mark this day as a dry day
+                dryDays.add(i);
+                ans[i] = 1; // default, might change later
+            } else {
+                ans[i] = -1; // raining day

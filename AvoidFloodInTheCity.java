@@ -25,3 +25,10 @@ class Solution {
                     ans[dryDay] = lake;
                     dryDays.remove(dryDay);
                 }
+                // mark this lake as full now
+                fullLakes.put(lake, i);
+            }
+        }
+        return ans;
+    }
+}

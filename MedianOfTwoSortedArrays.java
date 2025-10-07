@@ -15,3 +15,12 @@ class Solution {
             } else {
                 val = nums2[j++];
             }
+            if (count == mid1) num1 = val;
+            if (count == mid2) num2 = val;
+            count++;
+        }
+
+        if (total % 2 == 1) return num2;
+        else return (num1 + num2) / 2.0;
+    }
+}

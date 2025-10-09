@@ -19,3 +19,4 @@ class Solution {
             answer[i] = m - idx; // remaining potions are successful
         }
         return answer;
+        

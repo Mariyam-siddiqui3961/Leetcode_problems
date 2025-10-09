@@ -19,4 +19,19 @@ class Solution {
             answer[i] = m - idx; // remaining potions are successful
         }
         return answer;
-        
+        }
+
+    private int lowerBound(int[] arr, long target) {
+        int left = 0, right = arr.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+}
+

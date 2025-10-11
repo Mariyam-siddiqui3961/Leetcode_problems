@@ -32,3 +32,10 @@ class Solution {
 
         return dp[n - 1];
     }
+    // quick test runner (optional)
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int[] power = {5,9,2,10,2,7,10,9,3,8};
+        System.out.println(s.maximumTotalDamage(power)); // prints 31
+    }
+}

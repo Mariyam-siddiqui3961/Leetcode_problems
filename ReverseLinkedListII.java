@@ -10,3 +10,14 @@ class Solution {
         for (int i = 1; i < left; i++) {
             prev = prev.next;
         }
+        // Step 3: Reverse the sublist from left to right
+        ListNode curr = prev.next;      // first node of sublist
+        ListNode next = null;
+        ListNode prevSub = null;
+
+        for (int i = 0; i <= right - left; i++) {
+            next = curr.next;
+            curr.next = prevSub;
+            prevSub = curr;
+            curr = next;
+        }

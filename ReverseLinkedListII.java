@@ -21,3 +21,12 @@ class Solution {
             prevSub = curr;
             curr = next;
         }
+        // Step 4: Connect reversed sublist back
+        prev.next.next = curr;   // tail of reversed part connects to rest
+        prev.next = prevSub;     // connect start of reversed part
+
+        // Step 5: Return new head
+        return dummy.next;
+
+    }
+}

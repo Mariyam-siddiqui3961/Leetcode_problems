@@ -10,4 +10,8 @@ class Solution {
             if(!sorted.equals(prev)){
                 result.add(word);
                 prev = sorted;
-                
+                }
+        }
+        return result;
+    }
+}

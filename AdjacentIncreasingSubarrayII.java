@@ -4,3 +4,9 @@ class Solution {
         int n=nums.size();
         int ans = 0;
         int prev = 0, curr=1;
+        for(int i = 1; i<n; i++){
+            if(nums.get(i) > nums.get(i-1)){
+                curr++;
+            }else{
+                ans = Math.max(ans, curr/2);
+                ans= Math.max(ans, Math.min(prev, curr));

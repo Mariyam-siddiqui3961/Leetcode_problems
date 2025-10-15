@@ -10,3 +10,12 @@ class Solution {
             }else{
                 ans = Math.max(ans, curr/2);
                 ans= Math.max(ans, Math.min(prev, curr));
+                prev = curr;
+                curr = 1;
+            }
+        }
+        ans = Math.max(ans, curr/2);
+        ans = Math.max(ans, Math.min(prev, curr));
+        return ans;
+    }
+}

@@ -14,3 +14,9 @@ class Solution {
                 remainderCount.put(rem, remainderCount.get(rem) -1);
                 mex++;
             }else{
+                 break;
+            }
+        }
+        return mex;
+    }
+}

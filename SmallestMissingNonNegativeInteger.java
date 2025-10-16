@@ -9,3 +9,8 @@ class Solution {
         }
         int mex = 0;
         while(true){
+            int rem = mex % value;
+            if(remainderCount.getOrDefault(rem, 0) > 0){
+                remainderCount.put(rem, remainderCount.get(rem) -1);
+                mex++;
+            }else{

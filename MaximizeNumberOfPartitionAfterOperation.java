@@ -29,3 +29,13 @@ class Solution {
                 res = Math.max(res, applyChoice(s, i, false, mask, newBit, k, mem));
             }
         }
+        mem.put(key, res);
+        return res;
+    }
+
+    // Helper: after choosing a letter at position i (represented by newBit),
+    // either we can continue current partition (if mask|newBit has <= k distinct)
+    // or we must start a new partition (count +1) and the new partition's mask becomes newBit.
+    private int applyChoice(String s, int i, boolean nextCanChange, int curMask, int newBit, int k, Map<Long, Integer> mem) {
+        int newMask = curMask | newBit;
+        if (Integer.bitCount(newMask) > k) {

@@ -39,3 +39,11 @@ class Solution {
     private int applyChoice(String s, int i, boolean nextCanChange, int curMask, int newBit, int k, Map<Long, Integer> mem) {
         int newMask = curMask | newBit;
         if (Integer.bitCount(newMask) > k) {
+            // must start a new partition here; this letter begins that partition
+            return 1 + dp(s, i + 1, nextCanChange, newBit, k, mem);
+        } else {
+            // can continue current partition
+            return dp(s, i + 1, nextCanChange, newMask, k, mem);
+        }
+    }
+}

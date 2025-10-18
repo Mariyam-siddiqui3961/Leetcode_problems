@@ -13,3 +13,7 @@ class Solution {
                 distinct++;
                 last = candidate;
             }
+            }
+        return distinct;
+    }
+}

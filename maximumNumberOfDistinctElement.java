@@ -8,3 +8,8 @@ class Solution {
         for (int num : nums){
             long low  = (long) num -k;
             long high = (long) num +k;
+            long candidate = Math.max(low, last +1);
+            if(candidate <= high){
+                distinct++;
+                last = candidate;
+            }

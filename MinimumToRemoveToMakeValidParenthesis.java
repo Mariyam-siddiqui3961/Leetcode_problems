@@ -19,3 +19,11 @@ class Solution {
         StringBuilder result = new StringBuilder();
         for(int i = sb.length()-1; i>=0; i--){
             char c = sb.charAt(i);
+            if(c == '(' && open-- >0){
+                continue;
+            }
+            result.append(c);
+        }
+        return result.reverse().toString();
+    }
+}

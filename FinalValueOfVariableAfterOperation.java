@@ -5,3 +5,6 @@ class Solution {
         for(String op : operations){
             if(op.contains("++")){
                 x++;
+                }else{
+                x--;
+            }

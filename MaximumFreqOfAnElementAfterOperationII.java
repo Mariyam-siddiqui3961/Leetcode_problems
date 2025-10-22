@@ -9,3 +9,8 @@ class Solution {
             diff.put(x-k, diff.getOrDefault(x-k, 0) +1);
             diff.put(x+k+1, diff.getOrDefault(x+k+1, 0) -1);
         }
+         SortedSet<Long> events = new TreeSet<>(diff.keySet());
+        events.addAll(count.keySet());
+
+        int ans = 0, running = 0;
+        for(long point : events){

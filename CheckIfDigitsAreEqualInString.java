@@ -26,3 +26,14 @@ class Solution {
         int res = 1;
         while (n > 0 || k > 0) {
             int nMod = n % p;
+             int kMod = k % p;
+            res = res * nCk(nMod, kMod) % p;
+            n /= p;
+            k /= p;
+        }
+        return res;
+    }
+
+    // Simple C(n, k)
+    private int nCk(int n, int k) {
+        if (k > n) return 0;

@@ -17,3 +17,12 @@ class Solution {
         int[][] lookup = {
             {0, 6, 2, 8, 4}, // mod2 == 0
             {5, 1, 7, 3, 9}  // mod2 == 1
+            };
+        return lookup[mod2][mod5];
+    }
+
+    // Lucas Theorem for (n choose k) mod p
+    private int lucas(int n, int k, int p) {
+        int res = 1;
+        while (n > 0 || k > 0) {
+            int nMod = n % p;

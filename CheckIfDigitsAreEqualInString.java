@@ -10,3 +10,10 @@ class Solution {
         }
         return num1 == num2;
     }
+     // Returns (n choose k) % 10.
+    private int nCkMod10(int n, int k) {
+        int mod2 = lucas(n, k, 2);
+        int mod5 = lucas(n, k, 5);
+        int[][] lookup = {
+            {0, 6, 2, 8, 4}, // mod2 == 0
+            {5, 1, 7, 3, 9}  // mod2 == 1

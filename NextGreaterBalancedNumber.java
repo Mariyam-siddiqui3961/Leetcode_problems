@@ -1,0 +1,1 @@
+//------------Next Greater Balanced Number-----------

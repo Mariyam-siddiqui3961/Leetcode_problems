@@ -6,3 +6,10 @@ class Solution {
         }
         return -1;
     }
+    private boolean isBalanced(int num){
+        int[] count = new int[10];
+        int temp = num;
+        while(temp > 0){
+            count[temp % 10] ++;
+            temp /= 10;
+        }

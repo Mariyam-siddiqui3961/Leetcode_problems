@@ -8,3 +8,7 @@ class Solution {
         for (int i = 1; i<= days; i++){
             total += weeks +i;
         }
+         return total;
+
+    }
+}

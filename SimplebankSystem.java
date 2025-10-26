@@ -17,3 +17,11 @@ class Bank {
         return true;
         
     }
+    public boolean deposit(int account, long money) {
+        if(!isValidAccount(account))
+        return false;
+
+        balance[account - 1] += money;
+        return true;
+        
+    }

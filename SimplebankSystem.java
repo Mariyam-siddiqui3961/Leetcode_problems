@@ -30,3 +30,10 @@ class Bank {
         return false;
         if(balance[account - 1] < money)
         return false;
+        balance[account - 1] -= money;
+        return true;
+    }
+    private boolean isValidAccount(int account){
+        return account >=1 && account <= balance.length;
+    }
+}

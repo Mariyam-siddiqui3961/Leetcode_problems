@@ -7,3 +7,8 @@ class Solution {
             int curr = 0;
             for( char c: row.toCharArray()){
                 if(c=='1') curr++;
+                 }
+            if(curr>0){
+                totalBeam += prev * curr;
+                prev = curr;
+            }

@@ -12,3 +12,7 @@ class Solution {
                 totalBeam += prev * curr;
                 prev = curr;
             }
+            }
+        return totalBeam;
+    }
+}

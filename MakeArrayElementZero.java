@@ -34,4 +34,8 @@ class Solution {
             }
             steps++;
         }
+        for (int v : arr) if (v != 0) return false;
+        return true;
+    }
+}
 

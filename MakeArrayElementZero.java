@@ -23,4 +23,15 @@ class Solution {
         int[] arr = nums.clone();
         int curr = start;
         long steps = 0;
+         while(curr >= 0 && curr<n){
+            if(steps > limit) return false;
+            if(arr[curr] == 0){
+                curr +=dir;
+            }else{
+                arr[curr]--;
+                dir =-dir;
+                curr += dir;
+            }
+            steps++;
+        }
 

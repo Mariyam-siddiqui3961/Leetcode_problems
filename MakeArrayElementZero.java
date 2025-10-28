@@ -13,3 +13,14 @@ class Solution {
         long limit = (long) totalSum * (n+1) +n + 10L;
         for(int i = 0; i<n; i++){
             if(nums[i] !=0)continue;
+            if(simulate(nums, i, 1, limit)) total++;
+            if(simulate(nums, i, -1, limit)) total++;
+        }
+        return total;
+    }
+    private boolean simulate(int[] nums, int start, int dir, long limit){
+        int n = nums.length;
+        int[] arr = nums.clone();
+        int curr = start;
+        long steps = 0;
+

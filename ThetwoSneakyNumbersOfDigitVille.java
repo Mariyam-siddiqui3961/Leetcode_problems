@@ -9,3 +9,8 @@ class Solution {
             if(count[num] == 1){
                 result[idx++] = num;
             }
+             count[num]++;
+        }
+        return result;
+    }
+}

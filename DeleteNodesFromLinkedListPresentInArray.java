@@ -7,3 +7,7 @@ class Solution {
         }
         ListNode dummy = new ListNode(0);
         dummy.next = head;
+        ListNode current = dummy;
+
+        while(current.next != null){
+            if(set.contains(current.next.val)){

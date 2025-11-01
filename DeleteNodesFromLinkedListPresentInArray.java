@@ -5,3 +5,5 @@ class Solution {
         for(int num: nums){
             set.add(num);
         }
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;

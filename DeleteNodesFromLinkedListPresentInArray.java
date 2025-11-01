@@ -11,3 +11,8 @@ class Solution {
 
         while(current.next != null){
             if(set.contains(current.next.val)){
+                 current.next = current.next.next;
+            }else{
+                current = current.next;
+            }
+        }

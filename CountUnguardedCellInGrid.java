@@ -37,4 +37,14 @@ class Solution {
             }
         }
 
+        // ---- Scan columns: BOTTOM TO TOP ----
+        for (int j = 0; j < n; j++) {
+            boolean seenGuard = false;
+            for (int i = m - 1; i >= 0; i--) {
+                if (grid[i][j] == 1) seenGuard = true;
+                else if (grid[i][j] == 2) seenGuard = false;
+                else if (seenGuard) grid[i][j] = 3;
+            }
+        }
+
         

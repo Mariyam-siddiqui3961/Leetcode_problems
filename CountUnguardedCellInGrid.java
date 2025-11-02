@@ -6,3 +6,13 @@ class Solution {
 
         for (int[] g : guards) grid[g[0]][g[1]] = 1;
         for (int[] w : walls) grid[w[0]][w[1]] = 2;
+
+        // ---- Scan rows: LEFT TO RIGHT ----
+        for (int i = 0; i < m; i++) {
+            boolean seenGuard = false;
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) seenGuard = true;
+                else if (grid[i][j] == 2) seenGuard = false;
+                else if (seenGuard) grid[i][j] = 3;
+            }
+        }

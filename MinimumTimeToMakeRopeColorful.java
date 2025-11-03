@@ -8,3 +8,6 @@ class Solution {
                 totalTime += Math.min(maxTime, neededTime[i]);
                 maxTime = Math.max(maxTime, neededTime[i]);
             }else{
+                 maxTime = neededTime[i];
+            }
+        }

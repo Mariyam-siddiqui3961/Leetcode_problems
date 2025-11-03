@@ -11,3 +11,6 @@ class Solution {
                  maxTime = neededTime[i];
             }
         }
+        return totalTime;
+    }
+}

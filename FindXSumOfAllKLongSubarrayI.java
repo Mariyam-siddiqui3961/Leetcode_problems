@@ -24,3 +24,10 @@ class Solution {
             // Sort by highest frequency, then largest value
             Collections.sort(list, (a, b) -> {
                 if (b[1] != a[1]) return b[1] - a[1]; // higher freq first
+                 return b[0] - a[0]; // if freq same, bigger value first
+            });
+
+            // Take top x elements and compute sum
+            int sum = 0;
+            for (int i = 0; i < Math.min(x, list.size()); i++) {
+                sum += list.get(i)[0] * list.get(i)[1];

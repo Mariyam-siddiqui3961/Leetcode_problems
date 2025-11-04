@@ -31,3 +31,11 @@ class Solution {
             int sum = 0;
             for (int i = 0; i < Math.min(x, list.size()); i++) {
                 sum += list.get(i)[0] * list.get(i)[1];
+                }
+
+            result[start] = sum;
+        }
+
+        return result;
+    }
+}

@@ -14,3 +14,13 @@ class Solution {
             }
 
             // Create a list of (value, frequency)
+            List<int[]> list = new ArrayList<>();
+            for (int value = 1; value <= 50; value++) {
+                if (freq[value] > 0) {
+                    list.add(new int[]{value, freq[value]});
+                }
+            }
+
+            // Sort by highest frequency, then largest value
+            Collections.sort(list, (a, b) -> {
+                if (b[1] != a[1]) return b[1] - a[1]; // higher freq first

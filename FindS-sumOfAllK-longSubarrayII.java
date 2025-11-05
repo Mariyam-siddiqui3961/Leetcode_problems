@@ -106,3 +106,22 @@ class Solution {
                 freq.put(num, nw);
                 rest.add(new Node(num, nw));
             }
+
+             balance.run();
+        };
+
+        // build initial window
+        for (int i = 0; i < k; i++) add.accept(nums[i]);
+        ans[0] = sumTop[0];
+
+        // slide
+        for (int i = k; i < n; i++) {
+            remove.accept(nums[i - k]);
+            add.accept(nums[i]);
+            ans[i - k + 1] = sumTop[0];
+        }
+
+        return ans;
+    }
+}
+

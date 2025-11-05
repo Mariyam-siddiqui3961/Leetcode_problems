@@ -90,3 +90,19 @@ class Solution {
             rest.add(new Node(num, nw)); // new node goes to rest, balance will handle promotion
             balance.run();
         };
+         Consumer<Integer> remove = (num) -> {
+            int old = freq.get(num);
+            Node oldNode = new Node(num, old);
+            if (top.remove(oldNode)) {
+                sumTop[0] -= 1L * oldNode.val * oldNode.freq;
+            } else {
+                rest.remove(oldNode);
+            }
+
+            if (old == 1) {
+                freq.remove(num);
+            } else {
+                int nw = old - 1;
+                freq.put(num, nw);
+                rest.add(new Node(num, nw));
+            }

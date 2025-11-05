@@ -8,3 +8,18 @@ class Solution {
         int val;
         int freq;
         Node(int v, int f) { val = v; freq = f; }
+
+         // Order: higher freq first. If equal freq, higher val first.
+        @Override
+        public int compareTo(Node o) {
+            if (this.freq != o.freq) return Integer.compare(o.freq, this.freq);
+            return Integer.compare(o.val, this.val);
+        }
+
+        // helpful for TreeSet.remove(...) to find exact node
+        @Override
+        public boolean equals(Object o) {
+            if (!(o instanceof Node)) return false;
+            Node p = (Node) o;
+            return this.val == p.val && this.freq == p.freq;
+        }

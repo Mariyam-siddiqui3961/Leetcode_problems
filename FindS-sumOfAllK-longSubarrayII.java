@@ -23,3 +23,16 @@ class Solution {
             Node p = (Node) o;
             return this.val == p.val && this.freq == p.freq;
         }
+        @Override
+        public int hashCode() {
+            return Objects.hash(val, freq);
+        }
+    }
+
+    public long[] findXSum(int[] nums, int k, int x) {
+        int n = nums.length;
+        long[] ans = new long[n - k + 1];
+
+        Map<Integer, Integer> freq = new HashMap<>();
+        TreeSet<Node> top = new TreeSet<>();   // holds up to x best nodes
+        TreeSet<Node> rest = new TreeSet<>();  // holds the others

@@ -27,3 +27,20 @@ class Solution {
             int type = q[0], x = q[1];
             int root = find(x, parent);
             if (type == 1) {
+                // Query: find a station to handle maintenance for x's grid
+                if (online[x]) {
+                    ans.add(x);
+                } else {
+                    TreeSet<Integer> set = onlineStations.get(root);
+                    if (set == null || set.isEmpty()) ans.add(-1);
+                    else ans.add(set.first());
+                }
+            } else {
+                // type==2, set x offline and remove from TreeSet
+                if (online[x]) {
+                    online[x] = false;
+                    TreeSet<Integer> set = onlineStations.get(root);
+                    if (set != null) set.remove(x);
+                }
+            }
+        }

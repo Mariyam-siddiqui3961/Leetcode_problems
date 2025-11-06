@@ -11,3 +11,19 @@ class Solution {
             int v = find(edge[1], parent);
             if (u != v) parent[v] = u;
         }
+        // Build component -> sorted operational stations
+        Map<Integer, TreeSet<Integer>> onlineStations = new HashMap<>();
+        for (int i = 1; i <= c; i++) {
+            int root = find(i, parent);
+            onlineStations.computeIfAbsent(root, z -> new TreeSet<>()).add(i);
+        }
+
+        // For offline status
+        boolean[] online = new boolean[c + 1];
+        Arrays.fill(online, true);
+
+        List<Integer> ans = new ArrayList<>();
+        for (int[] q : queries) {
+            int type = q[0], x = q[1];
+            int root = find(x, parent);
+            if (type == 1) {

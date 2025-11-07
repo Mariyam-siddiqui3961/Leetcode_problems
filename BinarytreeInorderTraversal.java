@@ -4,3 +4,8 @@ class Solution {
         List<Integer> result = new ArrayList<>();
         inorder(root, result);
         return result;
+        }
+    private void inorder(TreeNode node, List<Integer> result){
+        if(node == null) return;
+
+        inorder(node.left, result); //left

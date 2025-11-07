@@ -9,3 +9,7 @@ class Solution {
         if(node == null) return;
 
         inorder(node.left, result); //left
+        result.add(node.val);  //root
+        inorder(node.right, result); // right
+    }
+}

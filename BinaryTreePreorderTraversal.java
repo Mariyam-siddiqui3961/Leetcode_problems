@@ -7,3 +7,8 @@ class Solution {
     }
     private void preorder(TreeNode node, List<Integer> result){
         if(node == null) return;
+         result.add(node.val);   //root
+        preorder(node.left, result);  //left
+        preorder(node.right, result);  //right
+    }
+}

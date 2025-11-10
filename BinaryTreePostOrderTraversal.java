@@ -10,3 +10,7 @@ class Solution {
         if(node == null) return;
 
         postorder(node.left, result);
+        postorder(node.right, result);
+        result.add(node.val);
+    }
+}

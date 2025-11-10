@@ -7,3 +7,6 @@ class Solution {
     }
 
     private void postorder(TreeNode node, List<Integer> result){
+        if(node == null) return;
+
+        postorder(node.left, result);

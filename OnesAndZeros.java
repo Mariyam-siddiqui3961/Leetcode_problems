@@ -6,3 +6,7 @@ class Solution {
             int zeros =0, ones = 0;
             for(char c : s.toCharArray()){
                 if(c == '0') zeros++;
+                 else ones++;
+            }
+            for(int i= m; i>= zeros; i--){
+                for(int j = n; j>= ones; j--){

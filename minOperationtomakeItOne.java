@@ -22,3 +22,14 @@ class Solution {
                 }
             }
         }
+         return (minLen == Integer.MAX_VALUE) ? -1 : (minLen + n -2);
+    }
+    private int gcd(int a, int b){
+        while (b!= 0){
+            int t = a%b;
+            a=b;
+            b=t;
+        }
+        return a;
+    }
+}

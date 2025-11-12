@@ -14,3 +14,11 @@ class Solution {
 
         for(int i = 0; i<n; i++){
             int gcd = nums[i];
+            for(int j = 1; j < n; j++){
+                gcd = gcd(gcd, nums[j]);
+                if(gcd == 1){
+                    minLen = Math.min(minLen, j-i+1);
+                    break;
+                }
+            }
+        }

@@ -9,3 +9,8 @@ class Solution {
                 res += '1';
             }else{
                 res += '0';
+                }
+        }
+        return Integer.parseInt(res, 2);
+    }
+}

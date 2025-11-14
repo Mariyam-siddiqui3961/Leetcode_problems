@@ -6,3 +6,6 @@ class Solution {
 
         for(int i = 0; i<str.length(); i++){
             if(str.charAt(i) == '0'){
+                res += '1';
+            }else{
+                res += '0';

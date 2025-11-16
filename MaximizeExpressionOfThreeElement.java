@@ -12,3 +12,11 @@ class Solution {
                 max1 = x;
             }else if (x > max2){
                 max2 = x;
+                }
+            if(x<min1){
+                min1 = x;
+            }    
+        }
+        return max1 + max2 - min1;
+    }
+}

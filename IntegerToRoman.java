@@ -8,3 +8,10 @@ class Solution {
 
         for(int i = 0; i< values.length; i++){
             while(num >= values[i]){
+                sb.append(symbols[i]);
+                num -= values[i];
+            }
+        }
+        return sb.toString();
+    }
+}

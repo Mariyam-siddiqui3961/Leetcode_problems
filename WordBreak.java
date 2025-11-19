@@ -8,3 +8,8 @@ class Solution {
 
         for(int i = 1; i<=n; i++){
             for(int j = 0; j<i; j++){
+                if (dp[j] && wordSet.contains(s.substring(j, i))){
+                    dp[i] = true;
+                    break;
+                }
+            }

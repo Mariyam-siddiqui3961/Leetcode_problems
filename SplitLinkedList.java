@@ -17,3 +17,15 @@ class Solution {
         int extra = length % k;        // first 'extra' parts get 1 more node
 
         curr = head;
+        // Step 3: Split into k parts
+        for (int i = 0; i < k; i++) {
+
+            int partSize = baseSize + (i < extra ? 1 : 0);
+
+            if (partSize == 0) {
+                result[i] = null;
+                continue;
+            }
+
+            // The first node of the current part
+            result[i] = curr;

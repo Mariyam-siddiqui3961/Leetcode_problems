@@ -29,3 +29,18 @@ class Solution {
 
             // The first node of the current part
             result[i] = curr;
+
+            // Move to the last node of this part
+            for (int j = 1; j < partSize; j++) {
+                curr = curr.next;
+            }
+
+            // Cut the list
+            ListNode nextPartHead = curr.next;
+            curr.next = null;
+            curr = nextPartHead;
+        }
+
+        return result;
+    }
+}

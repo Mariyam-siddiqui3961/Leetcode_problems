@@ -16,3 +16,8 @@ class Solution {
             for (int j = s; j >= num; j--){
                 dp[j] += dp[j - num];
             }
+            }
+        return dp[s];
+    }
+
+}

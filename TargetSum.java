@@ -12,3 +12,7 @@ class Solution {
 
         int [] dp = new int[s + 1];
         dp[0] = 1;
+        for(int num: nums){
+            for (int j = s; j >= num; j--){
+                dp[j] += dp[j - num];
+            }

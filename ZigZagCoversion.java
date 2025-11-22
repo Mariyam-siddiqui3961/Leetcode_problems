@@ -10,3 +10,9 @@ class Solution {
         }
         int currRow = 0;
         boolean goingDown = false;
+        for(char ch : s.toCharArray()){
+            rows.get(currRow).append(ch);
+            //change direction only at first or last row
+            if (currRow == 0 || currRow == numRows - 1) {
+                goingDown = !goingDown;
+            }

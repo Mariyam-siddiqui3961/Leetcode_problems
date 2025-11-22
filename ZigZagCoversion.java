@@ -16,3 +16,14 @@ class Solution {
             if (currRow == 0 || currRow == numRows - 1) {
                 goingDown = !goingDown;
             }
+            //move pointer
+            currRow += goingDown ? 1 : -1;
+        
+        }
+        StringBuilder result = new StringBuilder();
+        for(StringBuilder row: rows){
+        result.append(row);
+        }
+        return result.toString();
+    }
+}

@@ -9,3 +9,10 @@ class Solution {
         for (int i = 0; i< digits.length; i++){
             if(digits[i] == '0') continue;
                 int d = digits[i] - '0';
+                x = x * 10 + d;
+                sum += d;    
+            
+        }
+        return x * (long)sum;
+    }
+}

@@ -17,5 +17,9 @@ class Solution {
 
         for (int num : nums){
             if(num != 0){
+                nums[index] = num;
+                index++;
+            }
+        }
     }
 }

@@ -19,3 +19,8 @@ class Solution {
                 return i + 1;  // missing positive number
             }
         }
+
+        // Step 3: If all are in correct place
+        return n + 1;
+    }
+}

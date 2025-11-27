@@ -20,3 +20,10 @@ class Solution {
             result.add(path.toString());
             return;
         }
+        // Get letters for current digit
+        int digit = digits.charAt(index) - '0';
+        String letters = map[digit];
+
+        // Try each letter
+        for (char ch : letters.toCharArray()) {
+            path.append(ch);                   // choose

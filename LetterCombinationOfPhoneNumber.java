@@ -26,4 +26,10 @@ class Solution {
 
         // Try each letter
         for (char ch : letters.toCharArray()) {
-            path.append(ch);                   // choose
+            path.append(ch);                   
+            backtrack(index + 1, path, digits, map, result); // explore
+            path.deleteCharAt(path.length() - 1);            // un-choose (backtrack)
+        }
+    }
+}
+

@@ -9,3 +9,14 @@ class Solution {
                 "", "", "abc", "def", "ghi", "jkl",
                 "mno", "pqrs", "tuv", "wxyz"
         };
+
+        backtrack(0, new StringBuilder(), digits, map, result);
+        return result;
+    }
+
+    private void backtrack(int index, StringBuilder path, String digits, String[] map, List<String> result) {
+        // Base condition: if path length == digits length → complete combination
+        if (index == digits.length()) {
+            result.add(path.toString());
+            return;
+        }

@@ -20,4 +20,11 @@ class Solution {
                 if (target > nums[mid] && target <= nums[right]) {
                     left = mid + 1;
                 } else {
-                    right = mi
+                    right = mid - 1;
+                    }
+            }
+        }
+
+        return -1;
+    }
+}

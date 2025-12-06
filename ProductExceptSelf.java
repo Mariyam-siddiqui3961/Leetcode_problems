@@ -15,3 +15,7 @@ class Solution {
             ans[i] *= right;
             right *= nums[i];
         }
+
+        return ans;
+    }
+}

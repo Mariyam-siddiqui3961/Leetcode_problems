@@ -12,3 +12,13 @@ class Solution {
             arr[i][0]= num;
             arr[i][1] = reflected;
         }
+        Arrays.sort(arr, (a,b) -> {
+            if(a[1] != b[1]) return Integer.compare(a[1], b[1]);
+            return Integer.compare(a[0], b[0]);
+        });
+
+        int [] ans = new int [nums.length];
+        for(int i = 0; i< nums.length; i++) ans[i] = arr[i][0];
+        return ans;
+    }
+}

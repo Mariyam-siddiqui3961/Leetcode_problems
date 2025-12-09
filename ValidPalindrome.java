@@ -13,3 +13,14 @@ class Solution {
             while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
                 right--;
             }
+            // now compare
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+        return true;
+    }
+}

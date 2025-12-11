@@ -32,3 +32,10 @@ class Solution {
             count[s.charAt(i) - 'a']++;
             count[t.charAt(i) - 'a']--;
         }
+
+        for(int n: count){
+            if(n != 0) return false;
+        }
+        return true;
+    }
+}

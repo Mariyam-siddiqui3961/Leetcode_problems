@@ -10,3 +10,16 @@ class Solution {
         }
 
         double result = 1;
+
+        // Fast exponentiation
+        while (pow > 0) {
+            if ((pow & 1) == 1) {  
+                result *= x;        // multiply when last bit is 1
+            }
+            x *= x;                // square the base
+            pow >>= 1;             // move to next bit
+        }
+
+        return result;
+    }
+}

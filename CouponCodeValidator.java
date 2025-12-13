@@ -35,3 +35,16 @@ class Solution {
             if (priority.get(a[0]) != priority.get(b[0])) {
                 return priority.get(a[0]) - priority.get(b[0]);
             }
+            return a[1].compareTo(b[1]);
+        });
+
+        // Extract only codes
+        List<String> result = new ArrayList<>();
+        for (String[] v : valid) {
+            result.add(v[1]);
+        }
+
+        return result;
+    }
+}
+

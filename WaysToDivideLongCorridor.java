@@ -21,4 +21,16 @@ class Solution {
                 seatCount++;
 
                 // When starting a new section
+                if (seatCount > 2 && seatCount % 2 == 1) {
+                    ways = (ways * (plants + 1)) % MOD;
+                    plants = 0;
+                }
+            } else if (seatCount >= 2 && seatCount % 2 == 0) {
+                plants++;
+            }
+        }
+
+        return (int) ways;
+    }
+}
 

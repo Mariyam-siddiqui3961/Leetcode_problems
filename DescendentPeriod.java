@@ -9,3 +9,8 @@ class Solution {
             }else{
                 len =1;
             }
+            ans += len;
+        }
+        return ans;
+    }
+}

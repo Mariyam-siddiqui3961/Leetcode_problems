@@ -14,3 +14,9 @@ class Solution {
                 level.add(node.val);
                 if(node.left!= null) q.offer(node.left);
                 if(node.right != null) q.offer(node.right);
+                }
+            result.add(level);
+        }
+        return result;   
+    }
+}

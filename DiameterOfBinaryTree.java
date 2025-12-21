@@ -5,3 +5,7 @@ class Solution {
         height(root);
         return diameter;
     }
+    private int height(TreeNode node){
+        if (node == null) return 0;
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);

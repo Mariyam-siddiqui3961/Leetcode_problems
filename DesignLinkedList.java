@@ -38,4 +38,34 @@ class MyLinkedList {
     public void addAtTail(int val) {
         addAtIndex(size, val);
     }
+    // Add at index
+    public void addAtIndex(int index, int val) {
+        if (index < 0 || index > size) return;
+
+        Node prev = head;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+
+        Node newNode = new Node(val);
+        newNode.next = prev.next;
+        prev.next = newNode;
+
+        size++;
+    }
+
+    // Delete at index
+    public void deleteAtIndex(int index) {
+        if (index < 0 || index >= size) return;
+
+        Node prev = head;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+
+        prev.next = prev.next.next;
+        size--;
+    }
+}
+
 

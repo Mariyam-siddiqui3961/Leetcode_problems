@@ -29,3 +29,13 @@ class MyLinkedList {
         }
         return curr.val;
     }
+     // Add at head
+    public void addAtHead(int val) {
+        addAtIndex(0, val);
+    }
+
+    // Add at tail
+    public void addAtTail(int val) {
+        addAtIndex(size, val);
+    }
+

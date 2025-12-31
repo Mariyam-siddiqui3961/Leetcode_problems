@@ -10,3 +10,16 @@ class Solution {
 
         int left = 1, right = cells.length;
         int answer = 0;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (canCross(mid, cells)) {
+                answer = mid;
+                left = mid + 1;   // try later days
+            } else {
+                right = mid - 1;  // try earlier days
+            }
+        }
+
+        return answer;
+    }

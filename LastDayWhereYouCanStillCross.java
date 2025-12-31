@@ -43,3 +43,27 @@ class Solution {
                 visited[0][c] = true;
             }
         }
+        while (!queue.isEmpty()) {
+            int[] curr = queue.poll();
+            int r = curr[0], c = curr[1];
+
+            // Reached bottom row
+            if (r == ROWS - 1) return true;
+
+            for (int[] d : dirs) {
+                int nr = r + d[0];
+                int nc = c + d[1];
+
+                if (nr >= 0 && nr < ROWS && nc >= 0 && nc < COLS &&
+                    !visited[nr][nc] && grid[nr][nc] == 0) {
+
+                    visited[nr][nc] = true;
+                    queue.offer(new int[]{nr, nc});
+                }
+            }
+        }
+
+        return false;
+    }
+}
+

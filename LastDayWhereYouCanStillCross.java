@@ -23,3 +23,23 @@ class Solution {
 
         return answer;
     }
+    private boolean canCross(int day, int[][] cells) {
+        int[][] grid = new int[ROWS][COLS];
+
+        // Mark flooded cells
+        for (int i = 0; i < day; i++) {
+            int r = cells[i][0] - 1;
+            int c = cells[i][1] - 1;
+            grid[r][c] = 1;
+        }
+
+        Queue<int[]> queue = new LinkedList<>();
+        boolean[][] visited = new boolean[ROWS][COLS];
+
+        // Start BFS from top row
+        for (int c = 0; c < COLS; c++) {
+            if (grid[0][c] == 0) {
+                queue.offer(new int[]{0, c});
+                visited[0][c] = true;
+            }
+        }

@@ -7,3 +7,13 @@ class Solution {
                 digits[i]++;
                 return digits;
             }
+            digits[i] = 0; // carry continues
+        }
+
+        // All digits were 9
+        int[] result = new int[digits.length + 1];
+        result[0] = 1;
+        return result;
+    }
+}
+

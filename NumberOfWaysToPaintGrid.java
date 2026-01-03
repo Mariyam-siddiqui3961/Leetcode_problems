@@ -11,3 +11,6 @@ class Solution {
             same = newSame;
             diff = newDiff;
         }
+        return (int)((same + diff) % MOD);
+    }
+}

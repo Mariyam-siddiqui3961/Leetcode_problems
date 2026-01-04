@@ -17,3 +17,13 @@ class Solution {
                         count +=2;
                         sum += d1 + d2;
                     }
+                    if (count > 4) break;
+                }
+            }
+            if(count == 4){
+                totalSum += sum;
+            }
+        }
+        return totalSum;
+    }
+}

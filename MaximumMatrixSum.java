@@ -10,3 +10,17 @@ class Solution {
                 int val = matrix[i][j];
 
                 if (val < 0) negCount++;
+
+                int absVal = Math.abs(val);
+                sumAbs += absVal;
+                minAbs = Math.min(minAbs, absVal);
+            }
+        }
+        
+        if (negCount % 2 == 1) {
+            sumAbs -= 2L * minAbs;
+        }
+
+        return sumAbs;
+    }
+}

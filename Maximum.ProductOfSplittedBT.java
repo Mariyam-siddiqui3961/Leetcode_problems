@@ -26,3 +26,13 @@ class Solution {
         long leftSum = computeProduct(node.left);
         long rightSum = computeProduct(node.right);
 
+        long subSum = node.val + leftSum + rightSum;
+
+        long product = subSum * (totalSum - subSum);
+        maxProduct = Math.max(maxProduct, product);
+
+        return subSum;
+    }
+}
+
+

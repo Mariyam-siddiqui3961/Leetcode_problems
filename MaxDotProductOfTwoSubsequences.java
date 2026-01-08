@@ -22,4 +22,16 @@ class Solution {
                     takeBoth = Math.max(takeBoth,
                             product + dp[i - 1][j - 1]);
                 }
+                // Option 2 & 3: skip
+                dp[i][j] = Math.max(
+                        takeBoth,
+                        Math.max(dp[i - 1][j], dp[i][j - 1])
+                );
+            }
+        }
+
+        return dp[n][m];
+    }
+}
+
         }

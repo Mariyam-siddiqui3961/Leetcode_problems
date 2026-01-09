@@ -10,3 +10,15 @@ class Solution {
         if (leftDepth == rightDepth) {
             return root;
         }
+        if (leftDepth > rightDepth) {
+            return subtreeWithAllDeepest(root.left);
+        } else {
+            return subtreeWithAllDeepest(root.right);
+        }
+    }
+
+    private int depth(TreeNode node) {
+        if (node == null) return 0;
+        return 1 + Math.max(depth(node.left), depth(node.right));
+    }
+}

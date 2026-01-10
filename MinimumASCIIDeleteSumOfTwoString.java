@@ -15,3 +15,12 @@ class Solution {
                 }
             }
         }
+        // Total ASCII sum of both strings
+        int totalSum = 0;
+        for (char c : s1.toCharArray()) totalSum += c;
+        for (char c : s2.toCharArray()) totalSum += c;
+
+        // Minimum delete sum
+        return totalSum - 2 * dp[n][m];
+    }
+}

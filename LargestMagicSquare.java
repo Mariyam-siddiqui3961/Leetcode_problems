@@ -21,3 +21,36 @@ class Solution {
                     if (isMagic(grid, row, col, r, c, k)) {
                         return k;
                     }
+                    }
+            }
+        }
+
+        return 1; // At least 1x1 is magic
+    }
+
+    private boolean isMagic(int[][] grid, int[][] row, int[][] col,
+                            int r, int c, int k) {
+
+        // Target sum = first row
+        int target = row[r][c + k] - row[r][c];
+
+        // Check rows
+        for (int i = r; i < r + k; i++) {
+            if (row[i][c + k] - row[i][c] != target) return false;
+        }
+
+        // Check columns
+        for (int j = c; j < c + k; j++) {
+            if (col[r + k][j] - col[r][j] != target) return false;
+        }
+
+        // Check diagonals
+        int d1 = 0, d2 = 0;
+        for (int i = 0; i < k; i++) {
+            d1 += grid[r + i][c + i];
+            d2 += grid[r + i][c + k - 1 - i];
+        }
+
+        return d1 == target && d2 == target;
+    }
+}

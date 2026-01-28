@@ -9,3 +9,12 @@ class Solution {
                 res[idx++] = num;
             }
         }
+        for(int num: nums){
+            if(num %2 != 0){
+                res[idx++] = num;
+            }
+        }
+        return res;
+        
+    }
+}

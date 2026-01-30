@@ -12,7 +12,7 @@ class Solution {
         // }
 
 
-
+//------------------------------------------------------
         int index = 0;
 
         for (int num : nums){
@@ -27,3 +27,4 @@ class Solution {
         }
     }
 }
+

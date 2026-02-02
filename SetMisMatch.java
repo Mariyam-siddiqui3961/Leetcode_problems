@@ -13,3 +13,10 @@ class Solution {
         }
         int n = nums.length;
         int expectedSum = n * (n+1)/2;
+
+        int missing = expectedSum - (sum - duplicate);
+        return new int[]{duplicate, missing};
+
+
+    }
+}
